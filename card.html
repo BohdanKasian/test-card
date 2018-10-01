@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale-1.0" />
+    <link rel="stylesheet" href="css/cart.css"/>
+    <title>Cart</title>
+</head>
+<body>
+<form action="">
+    <div class="flex-justify-row baseline">
+        <h2>Сумма:</h2>
+        <input type="tel" placeholder="500" class="amount">
+    </div>
+    <div class="cart-width">
+        <div class="flex-justify-row">
+            <div class="cart-box">
+                <label for="cart-number">
+                    <p>Номер карты отправителя</p>
+                    <input name="input" type="tel" value="" placeholder="0000 0000 0000 0000 000" minlength="19" maxlength="23" tabindex="2" id="cart-number" inputmode="numeric" pattern="\d*">
+                </label>
+                <div class="flex-justify-row box-width">
+                    <div class="box-width">
+                        <label for="term" class="validity">
+                            <p>Срок действия:</p>
+                            <div class="flex-justify-row">
+                                <input name="input" type="tel" placeholder="MM" id="term" tabindex="3" minlength="2" maxlength="2" inputmode="numeric" pattern="\d*">
+                                <div>/</div>
+                                <input name="input" type="tel" placeholder="ГГ" tabindex="4" minlength="2" maxlength="2" inputmode="numeric" pattern="\d*">
+                            </div>
+                        </label>
+                    </div>
+                    <div class="box-width">
+                        <label for="cvv">
+                            <p>cvc2/cvv2</p>
+                            <input type="tel" placeholder="123" id="cvv" maxlength="3" minlength="3" inputmode="numeric" pattern="\d*">
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="arrow"></div>
+            <div class="cart-box">
+                <label for="cart-number-recipient">
+                    <p>Номер карты получателя</p>
+                    <input name="input" type="tel" value="" placeholder="0000 0000 0000 0000 000" minlength="19" maxlength="23" tabindex="2" id="cart-number-recipient" inputmode="numeric" pattern="\d*">
+                </label>
+            </div>
+        </div>
+        <div></div>
+        <div>
+            <input type="submit" >
+        </div>
+    </div>
+</form>
+</body>
+<script src="js/jquery-2.2.4.min.js"></script>
+<script src="js/card.js"></script>
+</html>

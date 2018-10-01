@@ -1,0 +1,55 @@
+@import "normalize"
+@import "reset"
+@import "mixin/_mixinFlexWebkit.scss"
+
+
+form
+  @include flexbox
+  @include flex-direction(column)
+  @include justify-content(center)
+  @include align-items(center)
+  margin: 30vh auto
+  .flex-justify-row.baseline
+    @include align-items(baseline)
+    input.amount
+      font-size: 20px
+      border: none
+      margin-left: 30px
+  .cart-width
+    width: 48%
+  .flex-justify-row
+    @include flexbox
+    @include justify-content(space-between)
+    @include align-items(center)
+    @include align-content(center)
+    .cart-box
+      @include flexbox
+      @include flex-direction(column)
+      p
+        display: inline-block
+      .box-width
+        width: 94%
+        input
+          display: block
+          text-align: center
+          width: 100%
+      .validity
+        @include flexbox
+        @include flex-direction(column)
+        .flex-justify-row
+          border: 1px solid silver
+          input
+            border: none
+
+
+
+
+.arrow
+  margin: 0 50px
+  content: ""
+  width: 65px
+  height: 37px
+  border: solid cadetblue
+  border-width: 0 1px 1px 0
+  background: white
+  transform: rotate(-45deg)
